@@ -1,0 +1,12 @@
+1. SELECT PrimerApellido, PrimerNombre FROM PERSONA WHERE PrimerApellido LIKE 'PE%'
+2. SELECT PrimerApellido, COUNT (PrimerApellido) FROM PERSONA GROUP BY PrimerApellido
+3. SELECT PrimerApellido AS Cantidad_Perez COUNT (PrimerApellido) FROM PERSONA WHERE PrimerApellido LIKE ´%PEREZ%´ GROUP BY PrimerApellido
+4. SELECT MONTH(FechaNacimiento) AS Mes, FechaNacimiento, PrimerNombre, PrimerApellido FROM PERSONA WHERE MONTH(FechaNacimiento)LIKE'1'GROUP BY Mes
+5. SELECT CONCAT ( PrimerNombre, ' ', PrimerApellido, ' ',FechaNacimiento ) FROM PERSONA 
+6. SELECT PERSONA.PrimerNombre, PERSONA.PrimerApellido, PERSONA.NumeroDocumento, TIPODOCUMENTO.Descripcion, PAIS.Nacionalidad
+       
+	   FROM PERSONA INNER JOIN TIPODOCUMENTO ON PERSONA.Tipodocumento = TIPODOCUMENTO.id LIKE '%RUN'%.TIPODOCUMENTO
+	   FROM PERSONA INNER JOIN PAIS ON PERSONA.Nacionalidad = PAIS.ID LIKE 'Chileno'.PAIS
+
+
+
